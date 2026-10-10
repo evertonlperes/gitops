@@ -1,0 +1,10 @@
+# Never commit secrets. Only SealedSecret ciphertext belongs in git.
+*.env
+.env*
+*.key
+*.pem
+*-secret.yaml
+!*-sealedsecret.yaml
+# Private overlay holding real hostnames/IPs (applied on the cluster host only)
+overlays/private/
+.DS_Store

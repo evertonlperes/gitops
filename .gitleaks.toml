@@ -1,0 +1,4 @@
+title = "gitops gitleaks config"
+
+[extend]
+useDefault = true

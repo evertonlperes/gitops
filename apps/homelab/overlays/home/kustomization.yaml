@@ -1,0 +1,10 @@
+# CI bumps newTag here (`kustomize edit set image`). The registry host below is a
+# placeholder; the real one is supplied by a private overlay on the cluster host.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: homelab
+resources:
+  - ../../base
+images:
+  - name: registry.example.internal/homelab/parser
+    newTag: latest

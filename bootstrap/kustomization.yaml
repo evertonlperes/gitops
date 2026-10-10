@@ -1,0 +1,10 @@
+# One-time install of Argo CD, then apply root-app.yaml.
+#   kubectl create namespace argocd
+#   kubectl apply -k bootstrap
+#   kubectl apply -f bootstrap/root-app.yaml
+# Bump the pinned version deliberately; check the release notes first.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: argocd
+resources:
+  - https://raw.githubusercontent.com/argoproj/argo-cd/v3.0.0/manifests/install.yaml
